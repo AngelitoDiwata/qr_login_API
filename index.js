@@ -65,6 +65,10 @@ app.get('/log/:id', function(req, res) {
     });
 })
 
+app.get('/', (req, res) => {
+    res.send('<h1>Hello World</h1>')
+})
+
 
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Example app listening on port ${process.env.PORT || 3000}`)
