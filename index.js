@@ -65,7 +65,7 @@ app.get('/log/:id', function(req, res) {
         await update(
             dateCollection[new Date().getDate() + 2],
             req.params.id,
-            new Date().toLocaleTimeString()
+            new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Manila' })
         );
     });
 })
