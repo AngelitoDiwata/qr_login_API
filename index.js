@@ -51,7 +51,7 @@ async function update(col, row, value) {
     });
     const sheets = google.sheets({ version: "v4", auth });
     var data = [{
-        range: `Sheet1!${col}${row}`,
+        range: `${getCurrentSheet(new Date().getMonth())}!${col}${row}`,
         values: [
             [value]
         ],
